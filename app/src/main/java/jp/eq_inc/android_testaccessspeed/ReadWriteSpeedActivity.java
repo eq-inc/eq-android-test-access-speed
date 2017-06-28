@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class ReadWriteSpeedActivity extends AppCompatActivity {
     private TextView mTvIntStaticAccess;
     private TextView mTvLongStaticAccess;
     private TextView mTvFloatStaticAccess;
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_read_write_speed);
 
         mTvIntStaticAccess = (TextView) findViewById(R.id.tvIntStaticVariable);
         mTvLongStaticAccess = (TextView) findViewById(R.id.tvLongStaticVariable);
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
             mAverageCount = averageCount;
             mAccessCount = accessCount;
 
-            mDialog = new ProgressDialog(MainActivity.this, ProgressDialog.STYLE_SPINNER);
+            mDialog = new ProgressDialog(ReadWriteSpeedActivity.this, ProgressDialog.STYLE_SPINNER);
             mDialog.setCancelable(false);
             mDialog.setCanceledOnTouchOutside(false);
         }
